@@ -1,7 +1,7 @@
 var nodemailer = require("nodemailer");
 
 var transporter = nodemailer.createTransport({
-  service: "gmail",
+  service: "zoho",
   auth: {
     user: process.env.user,
     pass: process.env.pass
@@ -18,7 +18,7 @@ module.exports = function(app) {
 
     // Create a mail with the above data
     var mailOptions = {
-      from: "cppan0@gmail.com",
+      from: "cppan0@zoho.com",
       to: "cppan0@gmail.com",
       subject: `${name} has contacted you via your portfolio's contact form!`,
       text: `
